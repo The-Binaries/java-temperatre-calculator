@@ -47,7 +47,9 @@ public class MainActivity extends AppCompatActivity {
                     // Display a message based on the temperature
                     if (celsius < 0) {
                         textViewMessage.setText("It's Freezing");
-                    } else if (celsius >= 0 && celsius <= 25) {
+                    } else if (celsius >= 0 && celsius < 18) {
+                        textViewMessage.setText("It's Cold");
+                    } else if (celsius >=18 && celsius <28) {
                         textViewMessage.setText("It's Warm");
                     } else {
                         textViewMessage.setText("It's Hot");
